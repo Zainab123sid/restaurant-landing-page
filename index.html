@@ -202,7 +202,7 @@
             <img src="./images/Group (2).png" alt="img">
           </div>
         <div class="special-inner">
-          <div class="special-card">
+          <div class="special-card scroll-animate">
             <div class="special-img">
               <img src="./images/dish-1 1.png" alt="img">
             </div>
@@ -214,7 +214,7 @@
               <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor </p>
             </div>
           </div>
-          <div class="special-card">
+          <div class="special-card scroll-animate">
             <div class="special-img">
               <img src="./images/dish-1 1.png" alt="img">
             </div>
@@ -226,7 +226,7 @@
               <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor </p>
             </div>
           </div>
-          <div class="special-card">
+          <div class="special-card scroll-animate">
             <div class="special-img">
               <img src="./images/dish-1 1.png" alt="img">
             </div>
@@ -238,7 +238,7 @@
               <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor </p>
             </div>
           </div>
-          <div class="special-card">
+          <div class="special-card scroll-animate">
             <div class="special-img">
               <img src="./images/dish-1 1.png" alt="img">
             </div>
@@ -257,10 +257,10 @@
     <section class="our py-60">
       <div class="container">
         <div class="inner-our">
-          <div class="left-our">
+          <div class="left-our scroll-animate animate-left">
             <img src="./images/dish-2 1.png" alt="img">
           </div>
-          <div class="right-our">
+          <div class="right-our scroll-animate animate-right">
             <h2>Wecome to Our Restaurant</h2>
             <p class="mb-20">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, tempore placeat! Esse iste aspernatur aliquid? Voluptas consequuntur dolores provident suscipit saepe omnis necessitatibus nisi soluta modi minima. Qui, architecto earum.</p>
             <div class="hero-btn">
@@ -276,6 +276,67 @@
       </div>
     </section>
 
+
+<section class="testimonials py-60" id="testimonials">
+  <div class="container">
+    <div class="head-txt reveal">
+      <h2 class="mb-20">Our Happy Customers</h2>
+      <p>What our customers say about our food and service.</p>
+    </div>
+
+    <div class="testimonial-box reveal">
+      <div class="testimonial-stars">★★★★★</div>
+
+      <p class="testimonial-text" id="reviewText">
+        The food was absolutely delicious!
+      </p>
+
+      <h3 id="reviewName">Ayesha Khan</h3>
+      <span id="reviewRole">Happy Customer</span>
+
+      <div class="slider-controls">
+        <button type="button" id="prevBtn" aria-label="Previous review">←</button>
+        <button type="button" id="nextBtn" aria-label="Next review">→</button>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="booking py-60" id="booking">
+  <div class="container">
+    <div class="booking-inner reveal">
+      <div class="head-txt">
+        <h2 class="mb-20">Book Your Table</h2>
+        <p>Enjoy a wonderful dining experience with us.</p>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <input type="text" placeholder="Your Name"
+               aria-label="Your Name" required>
+
+        <input type="email" placeholder="Email Address"
+               aria-label="Email Address" required>
+
+        <input type="date" aria-label="Reservation Date" required>
+
+        <select aria-label="Number of Guests" required>
+          <option value="">Select Guests</option>
+          <option value="1">1 Person</option>
+          <option value="2">2 People</option>
+          <option value="3">3 People</option>
+          <option value="4">4 People</option>
+          <option value="5+">5+ People</option>
+        </select>
+
+        <button type="submit" class="primary-cta">
+          Book a Table
+        </button>
+      </form>
+      <p class="booking-message" id="bookingMessage" role="status"></p>
+    </div>
+  </div>
+</section>
 
 
     <footer class="py-60 site-footer">

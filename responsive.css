@@ -76,3 +76,43 @@ h2 {
     justify-items:start;
 }
 }
+
+@media (max-width: 768px) {
+  .testimonials h2,
+  .booking h2 {
+    font-size: 38px;
+  }
+
+  .testimonial-box {
+    padding: 40px 20px;
+    border-radius: 40px 0 40px 0;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+    min-height: 120px;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .primary-cta,
+  .secondary-cta,
+  .testimonial-box,
+  .slider-controls button {
+    transition: none;
+  }
+}

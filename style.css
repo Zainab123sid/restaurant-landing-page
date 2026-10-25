@@ -243,6 +243,176 @@ transition: 0.3s ease;
 
 
 
+/* TESTIMONIAL SECTION */
+
+.testimonials {
+  background: var(--light-gray);
+  text-align: center;
+}
+
+.testimonial-box {
+  background: var(--white);
+  max-width: 720px;
+  margin: 40px auto 0;
+  padding: 55px 40px;
+  border-radius: 70px 0 70px 0;
+  box-shadow: 0 15px 45px rgba(16, 26, 36, 0.07);
+  transition: transform 0.4s ease;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial-stars {
+  color: var(--orange);
+  font-size: 26px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.testimonial-text {
+  font-size: 20px;
+  line-height: 1.8;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.testimonial-box h3 {
+  font-size: 26px;
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+}
+
+#reviewRole {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.slider-controls button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--dark-blue);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.slider-controls button:hover {
+  background: var(--orange);
+  transform: scale(1.1);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.slider-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #cbd0d5;
+}
+
+.slider-dots span.active {
+  background: var(--orange);
+  width: 25px;
+  border-radius: 10px;
+}
+
+/* BOOKING SECTION */
+
+.booking {
+  background: var(--dark-blue);
+}
+
+.booking h2 {
+  color: var(--white);
+}
+
+.booking .head-txt p {
+  color: #cbd0d5;
+}
+
+.booking-inner {
+  max-width: 950px;
+  margin: auto;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px 0 12px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  background: white;
+}
+
+.booking-form button {
+  grid-column: 1 / -1;
+  border: none;
+  cursor: pointer;
+  justify-self: center;
+  font-family: "David Libre", serif;
+}
+
+.booking-message {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+/* BUTTON ANIMATION */
+
+.primary-cta,
+.secondary-cta {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.primary-cta:hover,
+.secondary-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* SCROLL REVEAL ANIMATION */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease,
+              transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .footer-inner {
     display: grid;
@@ -270,8 +440,212 @@ color:var(--orange);}
 }
 .site-footer{
   position: relative;
+  overflow: hidden;
 }
 .footer-dec {
     position: absolute;
     bottom: 0;
+}
+
+/* ==============================
+   FULL WEBSITE ANIMATIONS
+================================ */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 1. Header animation */
+
+.site-header {
+  animation: headerDown 0.9s ease both;
+}
+
+@keyframes headerDown {
+  from {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Hero text animation */
+
+.left-hero {
+  animation: slideFromLeft 1s ease both;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 3. Hero image animation */
+
+.right-hero {
+  animation: slideFromRight 1.2s ease both;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 4. Floating food image */
+
+.hero-bootom-img img {
+  animation: foodFloat 4s ease-in-out infinite;
+}
+
+@keyframes foodFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* 5. Special dishes hover */
+
+.special-card {
+  transition: transform 0.4s ease;
+}
+
+.special-card:hover {
+  transform: translateY(-12px);
+}
+
+.special-img img {
+  transition: transform 0.5s ease;
+}
+
+.special-card:hover .special-img img {
+  transform: scale(1.08) rotate(5deg);
+}
+
+/* 6. Buttons hover */
+
+.primary-cta,
+.secondary-cta {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.primary-cta:hover,
+.secondary-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* 7. Scroll reveal animations */
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(55px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide from left */
+
+.animate-left {
+  transform: translateX(-65px);
+}
+
+/* Slide from right */
+
+.animate-right {
+  transform: translateX(65px);
+}
+
+/* All visible animation states */
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger special cards */
+
+.special-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.special-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.special-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.special-card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* 8. Footer link animation */
+
+.footer2 li a {
+  display: inline-block;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer2 li a:hover {
+  color: var(--orange);
+  transform: translateX(6px);
+}
+
+/* 9. Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .site-header,
+  .left-hero,
+  .right-hero,
+  .hero-bootom-img img {
+    animation: none;
+  }
+
+  .scroll-animate,
+  .animate-left,
+  .animate-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .special-card,
+  .special-img img,
+  .primary-cta,
+  .secondary-cta {
+    transition: none;
+  }
 }
